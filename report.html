@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>k6 report</title>
+<style>body{font-family:Arial;margin:20px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:8px}th{background:#f4f4f4}</style>
+</head>
+<body>
+<h1>k6 Report</h1>
+<p>Source: results.json</p>
+<table>
+<thead><tr><th>Metric</th><th>Last value</th><th>Tags</th></tr></thead>
+<tbody>
+<tr><td>http_reqs</td><td>1</td><td>{"expected_response":"true","group":"","method":"GET","name":"https://www.google.com","proto":"HTTP/2.0","scenario":"default","status":"200","tls_version":"tls1.3","url":"https://www.google.com"}</td></tr><tr><td>http_req_duration</td><td>141.6994</td><td>{"expected_response":"true","group":"","method":"GET","name":"https://www.google.com","proto":"HTTP/2.0","scenario":"default","status":"200","tls_version":"tls1.3","url":"https://www.google.com"}</td></tr><tr><td>checks</td><td>1</td><td>{"check":"status is 200","group":"","scenario":"default"}</td></tr><tr><td>data_sent</td><td>717</td><td>{"group":"","scenario":"default"}</td></tr><tr><td>data_received</td><td>21972</td><td>{"group":"","scenario":"default"}</td></tr>
+</tbody>
+</table>
+<hr/>
+<pre>{
+  "metrics": [
+    "http_reqs",
+    "http_req_duration",
+    "http_req_blocked",
+    "http_req_connecting",
+    "http_req_tls_handshaking",
+    "http_req_sending",
+    "http_req_waiting",
+    "http_req_receiving",
+    "http_req_failed",
+    "checks",
+    "vus",
+    "vus_max",
+    "data_sent",
+    "data_received",
+    "iteration_duration",
+    "iterations"
+  ]
+}</pre>
+</body>
+</html>

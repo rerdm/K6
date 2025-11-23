@@ -1,0 +1,19 @@
+{
+  "name": "k6-typescript-tests",
+  "version": "0.1.0",
+  "description": "k6 performance tests written in TypeScript",
+  "scripts": {
+    "build:tsc": "tsc cookie_test.ts --outFile cookie_test.js",
+    "build:esbuild": "esbuild cookie_test.ts --bundle --platform=neutral --format=esm --target=es2020 --outfile=cookie_test.js --external:k6 --external:k6/http",
+    "build": "npm run build:esbuild",
+    "run": "k6 run cookie_test.js",
+    "start": "npm run build && npm run run",
+    "report:k6html": "npx k6-html-reporter@0.0.4 results.json -o test-results/k6-report.html"
+  },
+  "devDependencies": {
+    "@types/k6": "^0.36.0",
+    "esbuild": "^0.18.17",
+    "k6-html-reporter": "^0.0.4",
+    "typescript": "^5.2.2"
+  }
+}
